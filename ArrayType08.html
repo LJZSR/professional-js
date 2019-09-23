@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            "use strict"
+            var person1 = {
+                toLocaleString : function() {
+                    return "Nikolaos";
+                },
+                toString : function() {
+                    return "Nicholas";
+                }
+            }
+            var person2 = {
+                toLocaleString : function() {
+                    return "Grigorios";
+                },
+                toString : function() {
+                    return "Grey";
+                }
+            }
+            var people = [person1, person2];
+            alert(people);
+            alert(people.toLocaleString());
+        </script>
+    </body>
+</html>
