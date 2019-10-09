@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function sum(num1, num2) {
+                return num1 + num2;
+            }
+            var anotherSum = sum;
+            alert(sum(10, 20));
+            alert(anotherSum(20, 20));
+            sum = null;
+            alert(anotherSum(30, 20));
+        </script>
+    </body>
+</html>
