@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            "use strict"
+            function callSomeFunction(someFunction, someArgumnet) {
+                return someFunction(someArgumnet);
+            }
+            function add10(num) {
+                return num + 10;
+            }
+            function getGreeting(name) {
+                return "Hello " + name;
+            }
+            var result1 = callSomeFunction(add10, 10);
+            var result2 = callSomeFunction(getGreeting, "Nicholas");
+            alert(result1);
+            alert(result2);
+        </script>
+    </body>
+</html>
