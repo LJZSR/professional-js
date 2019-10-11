@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            window.color = "red";
+            var o = {
+                color: "blue"
+            }
+            function sayColor(){
+                alert(this.color);
+            }
+            sayColor();
+            o.sayColor = sayColor;
+            o.sayColor();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function outer() {
+                inner();
+            }
+            function inner() {
+                alert(inner.caller);
+            }
+            outer();
+        </script>
+    </body>
+</html>
