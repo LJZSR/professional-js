@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            "use strict"
+            var stringValue = "Lorem ipsum dolor sit amet, consectetur adipisicing elit";
+            var position = new Array();
+            var p = stringValue.indexOf('e');
+            while (p != -1) {
+                position.push(p);
+                p = stringValue.indexOf('e', p+1);
+            }
+            alert(position);
+        </script>
+    </body>
+</html>
