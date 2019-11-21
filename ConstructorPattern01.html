@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function Person(name, age, job) {
+                this.name = name;
+                this.age = age;
+                this.job = job;
+                this.sayName = function() {
+                    alert(this.name)
+                }
+            }
+            function createPerson(name, age, job) {
+                var o = new Object();
+                o.name = name;
+                o.age = age;
+                o.job = job;
+                return o;
+            }
+            var person1 = new Person("Nicholas", 29, "Software Engineer");
+            var person2 = new Person("Grey", 29, "Doctor");
+            var person3 = createPerson("Nicholas", 27, "Software Engineer");
+            var person4 = createPerson("Grey", 27, "Doctor");
+        </script>
+    </body>
+</html>
