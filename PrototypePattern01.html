@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function Person() {
+                Person.prototype.name = "Nicholas";
+                Person.prototype.age = 29;
+                Person.prototype.job = "Software Engineer";
+                Person.prototype.sayName = function() {
+                    alert(this.name);
+                }
+            }
+            var person1 = new Person();
+            var person2 = new Person();
+            //person2.sayName();
+            //alert(person1.sayName === person2.sayName)
+            //alert(Person.prototype.isPrototypeOf(person2))
+            person2.name = "Grey";
+            person1.sayName();
+            person2.sayName();
+        </script>
+    </body>
+</html>
