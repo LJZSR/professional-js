@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function Person() {
+                Person.prototype.name = "Nicholas";
+                Person.prototype.age = 27;
+                Person.prototype.job = "Software Engineer";
+                Person.prototype.sayName = function () {
+                    alert(this.name);
+                }
+            }
+            var person1 = new Person();
+            person1.name = "Grey";
+            person1.sayName();
+            delete person1.name;
+            person1.sayName();
+        </script>
+    </body>
+</html>
