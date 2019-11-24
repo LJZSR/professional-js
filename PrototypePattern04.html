@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function Person(){
+                Person.prototype.name = "Nocholas";
+                Person.prototype.age = 26;
+                Person.prototype.job = "Software Engineer";
+                Person.prototype.sayName = function() {
+                    alert(this.name);
+                }
+            }
+            var person1 = new Person();
+            alert(person1.hasOwnProperty('name'));
+            alert('name' in person1);
+            person1.name = "Grey";
+            alert(person1.hasOwnProperty('name'));
+            alert('name' in person1);
+        </script>
+    </body>
+</html>
