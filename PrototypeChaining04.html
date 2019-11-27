@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      function SuperType() {
+        this.color = ["red", "blue", "green"];
+      }
+
+      function SubType() {}
+      SubType.prototype = new SuperType();
+
+      var instance1 = new SubType();
+      instance1.color.push("black");
+      var instance2 = new SubType();
+      alert(instance1.color);
+      alert(instance2.color);
+    </script>
+  </body>
+</html>
