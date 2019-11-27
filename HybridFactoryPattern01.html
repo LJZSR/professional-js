@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      function Person(name, age, job) {
+        var o = new Object;
+        o.name = name;
+        o.age = age;
+        o.job = job;
+        o.sayName = function() {
+          alert(this.name);
+        };
+        return o;
+      }
+      var friend1 = new Person("Nicholas", 29, "Software Engineer");
+      var friend2 = Person();
+      friend1.sayName();
+    </script>
+  </body>
+</html>
