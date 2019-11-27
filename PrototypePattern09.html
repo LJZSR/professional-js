@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      function Person() {}
+      Person.prototype = {
+        name: "Nicholas",
+        age: 29,
+        sayName: function() {
+          alert(this.name);
+        },
+        constructor: Person
+      }
+      var friend = new Person();
+      Person.prototype.sayHi = function () {
+        alert("hi!");
+      }
+      friend.sayHi();
+    </script>
+  </body>
+</html>

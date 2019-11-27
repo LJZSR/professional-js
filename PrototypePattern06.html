@@ -2,7 +2,16 @@
 <html>
     <body>
         <script>
-            
+          var o = {
+            toString : function() {
+              return "My Object";
+            }
+          }
+          for (var prop in o) {
+            if (prop == 'toString()') {
+              alert("Found toString")
+            }
+          }
         </script>
     </body>
 </html>

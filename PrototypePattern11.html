@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      String.prototype.startsWith = function(text) {
+        if (this.indexOf(text) == 0) {
+          return 'Yes'
+        }
+        else {
+          return 'No'
+        };
+      }
+      var msg = "Hello world!";
+      alert(msg.startsWith("Hello"));s
+    </script>
+  </body>
+</html>

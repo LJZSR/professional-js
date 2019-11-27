@@ -2,12 +2,11 @@
 <html>
     <body>
         <script>
-            function Person() {
-                Person.prototype.name = "Nicholas";
-                Person.prototype.age = 27;
-                Person.prototype.sayName = function() {
-                    alert(this.name)
-                }
+            function Person() { }
+            Person.prototype.name = "Nicholas";
+            Person.prototype.age = 27;
+            Person.prototype.sayName = function() {
+                alert(this.name)
             }
             var person1 = new Person();
             alert(person1.hasOwnProperty('name'));
