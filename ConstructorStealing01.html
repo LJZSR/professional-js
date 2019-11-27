@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      function SuperType() {
+        this.colors = ["red", "blue", "green"];
+      }
+      function SubType() {
+        SuperType.call(this);
+      }
+      var instance1 = new SubType();
+      instance1.colors.push("black");
+      var instance2 = new SubType();
+      alert(instance1.colors);
+      alert(instance2.colors);
+    </script>
+  </body>
+</html>

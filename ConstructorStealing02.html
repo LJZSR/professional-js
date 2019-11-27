@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      function SuperType(name) {
+        this.name = name
+      }
+      function SubType() {
+        SuperType.call(this, ["Nicholas"]);
+        this.age = 29;
+      }
+      var instance = new SubType();
+      alert(instance.name);
+      alert(instance.age);
+    </script>
+  </body>
+</html>
