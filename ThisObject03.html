@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      var name = "The Window";
+      var object = {
+        name: "Object",
+        getName: function() {
+          return this.name;
+        }
+      }
+
+      alert(object.getName());
+      alert((object.getName)());
+      alert((object.getName = object.getName)());
+    </script>
+  </body>
+</html>

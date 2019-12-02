@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      var name = "The Window";
+      var object = {
+        name: "My object",
+        getNameFunc: function() {
+          return function() {
+            return this.name;
+          }
+        }
+      }
+      alert(object.getNameFunc()())
+    </script>
+  </body>
+</html>
