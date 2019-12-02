@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      var num = 0;
+      var max = 10;
+      var intervalId = null;
+
+      function incrementNumber() {
+        num++;
+
+        if (num == max) {
+          clearInterval(intervalId);
+          alert("Done");
+        }
+        else {
+          console.log("OK");
+        }
+      }
+
+      intervalId = setInterval(incrementNumber, 1000);
+    </script>
+  </body>
+</html>

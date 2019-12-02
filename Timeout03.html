@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      var num = 0;
+      var max = 10;
+
+      function incrementNumber() {
+        num++;
+        if (num < max) {
+          console.log("OK");
+          setTimeout(incrementNumber, 1000);
+        }
+        else {
+          alert("Done");
+        }
+      }
+      setTimeout(incrementNumber, 1000);
+    </script>
+  </body>
+</html>
