@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      var factorial = (function f(num) {
+        if (num <= 1) {
+          return 1;
+        } 
+        else {
+          return f(num-1) * num;
+        }
+      });
+      alert(factorial(4));
+    </script>
+  </body>
+</html>
