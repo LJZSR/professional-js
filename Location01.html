@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      function getQueryStringArgs(str) {
+        var qs = (str.length > 0 ? str.substring(1) : '');
+        args = {};
+        items = qs.length ? qs.split('&') : [];
+        console.log(items[0])
+        item = null;
+        name = null;
+        value = null;
+        for (var i=0; i<items.length; ++i) {
+          item = items[i].split('=');
+          name = decodeURIComponent(item[0]);
+          value = decodeURIComponent(item[1]);
+          if (name.length) {
+            args[name] = value;
+          }
+        }
+        return args;
+      }
+      var args = getQueryStringArgs("?q=javascript&num=10");
+      alert(args['q']);
+      alert(args['num']);
+    </script>
+  </body>
+</html>
