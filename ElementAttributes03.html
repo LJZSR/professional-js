@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="myDiv" align="left" my_special_attribute="hello"></div>
+    <script>
+      function outputAttributes(element) {
+        var pairs = new Array(),
+            attrName,
+            attrValue,
+            i;
+        for (i=0; i<element.attributes.length; ++i) {
+          attrName = element.attributes[i].nodeName;
+          attrValue = element.attributes[i].nodeValue;
+          pairs.push(attrName + "= \"" + attrValue + "\"");
+        }
+        return pairs.join(" ");
+      }
+      var div = document.getElementById("myDiv");
+      console.log(outputAttributes(div));
+    </script>
+  </body>
+</html>
