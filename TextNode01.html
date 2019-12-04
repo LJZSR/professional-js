@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="myDiv">Hello World</div>
+    <script>
+      var div = document.getElementById("myDiv");
+      var textNode = div.firstChild;
+      alert(textNode.nodeValue);
+      div.firstChild.nodeValue = "Some other message";
+    </script>
+  </body>
+</html>
