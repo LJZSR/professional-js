@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="myDiv"><!-- A comment -->Hello World!</div>
+    <script>
+      var div = document.getElementById("myDiv");
+      var comment = div.firstChild;
+      alert(comment.nodeValue);
+      var comment = document.createComment("Hi");
+      document.body.appendChild(comment);
+    </script>
+  </body>
+</html>
