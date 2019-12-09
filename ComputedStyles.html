@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Computed Styles Example</title>
+    <style>
+      #myDiv {
+        background-color: blue;
+        width: 100px;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="myDiv" style="background-color: red; border: 1px solid black;"></div>
+    <script>
+      var div = document.getElementById("myDiv");
+      for (var i=0; i<div.style.length; ++i) {
+        prop = div.style[i]
+        value = div.style.getPropertyValue(prop);
+        console.log(prop + " : " + value);
+      }
+      var computedStyle = document.defaultView.getComputedStyle(div, null);
+      console.log(computedStyle.height);
+      console.log(computedStyle.width);
+    </script>
+  </body>
+</html>
