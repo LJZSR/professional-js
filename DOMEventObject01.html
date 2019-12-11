@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <input type="button" id="myBtn" value="Click Me">
+    <script>
+      var btn = document.getElementById("myBtn");
+      btn.onclick = function() {
+        alert(event.currentTarget === this);
+        alert(event.target === this);
+      }
+    </script>
+  </body>
+</html>
