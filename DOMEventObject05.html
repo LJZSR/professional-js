@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <input type="button" id="myBtn" value="Click Me">
+    <script>
+      var btn = document.getElementById("myBtn");
+      btn.onclick = function(event) {
+        alert("Clicked");
+        event.stopPropagation();
+      };
+
+      document.body.onclick = function(event) {
+        alert("Body clicked");
+      }
+    </script>
+  </body>
+</html>

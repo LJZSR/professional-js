@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <a id="myLink" href="http://www.baidu.com" target="_blank">点击访问百度</a>
+    <script>
+      var link = document.getElementById("myLink");
+      link.onclick = function(event) {
+        event.preventDefault();
+      }
+    </script>
+  </body>
+</html>
