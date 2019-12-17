@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+  <img src="1.jpeg" id="myImage">
+  <script>
+    var image = document.getElementById("myImage");
+    image.addEventListener("load", function() {
+      alert(event.target.src);
+    })
+  </script>
+</html>

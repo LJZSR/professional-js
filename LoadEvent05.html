@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      window.addEventListener("load", function() {
+        var image = document.createElement("img");
+        image.addEventListener("load", function() {
+          alert(event.target.src);
+        });
+        document.body.appendChild(image);
+        image.src = "1.jpeg";
+      })
+    </script>
+  </body>
+</html>
