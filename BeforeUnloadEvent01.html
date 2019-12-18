@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <script>
+    window.addEventListener("beforeunload", function() {
+      var message = "I'm really going to miss you if you go.";
+      event.returnValue = message;
+      return message;
+    })
+  </script>
+  <body>
+    <a href="http://www.baidu.com">Go baidu</a>
+  </body>
+</html>
