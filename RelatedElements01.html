@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #myDiv {
+        width: 500px;
+        height: 500px;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="myDiv"></div>
+    <script>
+      var div = document.getElementById("myDiv");
+      div.addEventListener('mouseout', function() {
+        console.log("Mouse out of " + event.target.tagName + " to " + event.relatedTarget.tagName);
+      })
+    </script>
+  </body>
+</html>
