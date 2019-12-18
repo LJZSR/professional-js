@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="myDiv"></div>
+    <script>
+      var div = document.getElementById("myDiv");
+      var event;
+      div.addEventListener("myEvent", function(event) {
+        console.log("DIV: " + event.detail);
+      });
+      document.addEventListener("myEvent", function(event) {
+        console.log("DOCUMENT: " + event.detail);
+      });
+      event = document.createEvent("CustomEvent");
+      event.initEvent("myEvent", true, true);
+      event.detail = "Hello World!"
+      div.dispatchEvent(event);
+    </script>
+  </body>
+</html>

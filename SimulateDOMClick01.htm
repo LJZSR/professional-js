@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <input type="button" id="myBtn" value="Click Me">
+    <script>
+      var btn = document.getElementById("myBtn");
+      btn.onclick = function() {
+        alert("Clicked");
+      }
+      var event = document.createEvent("MouseEvent");
+
+      event.initMouseEvent("click", true, true, document.defaultView, 0, 0, 0, 0, 0, false, false, false, false, 0 ,null);
+
+      btn.dispatchEvent(event)
+    </script>
+  </body>
+</html>

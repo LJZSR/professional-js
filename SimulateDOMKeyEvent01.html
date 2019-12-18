@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <input type="text" id="myText">
+    <script>
+      var textbox = document.getElementById("myText");
+      textbox.addEventListener("keydown", function(event) {
+        console.log(event.keyCode);
+      })
+      var event = document.createEvent("KeyboardEvent");
+      event.initKeyboardEvent("keydown", true, true, document.defaultView, 'a', 0, 'Shift', 1)
+      textbox.dispatchEvent(event);
+    </script>
+  </body>
+</html>
