@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <script>
-    window.addEventListener("load", function() {
-      var script = document.createElement("script");
-      script.addEventListener("readystatechange", function() {
-        var target = event.target;
-        if (target.readyState == "loaded" || target.readyState == "complete") {
-          target.removeEventListener("readystatechange", arguments.callee);
+  <head>
+    <script>
+      window.addEventListener("load", function() {
+        var script = document.createElement("script");
+        script.addEventListener("readystatechange", function() {
+          var target = event.target;
+          if (target.readyState == "loaded" || target.readyState == "complete") {
+            target.removeEventListener("readystatechange", arguments.callee);
+          }
           alert("Script Loaded");
-        }
-        alert("Script Loaded");
+        })
+        script.src="./example.js";
+        document.body.appendChild(script);
       })
-      script.src="./example.js";
-      document.body.appendChild(script);
-    })
-  </script>
+    </script>
+  </head>
+  
   <body>
     
   </body>
