@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <ul id="myLinks">
+      <li id="goSomewhere">Go Somewhere</li>
+      <li id="doSomething">Do Something</li>
+      <li id="sayHi">Say Hi</li>
+    </ul>
+    <script>
+      var list = document.getElementById("myLinks");
+      list.addEventListener("click", function() {
+        var target = event.target;
+        if (target.id === "goSomewhere") {
+          location.href = "http://www.baidu.com";
+        }
+        else if (target.id === "doSomething") {
+          document.title = "I have changed the document's title";
+        }
+        else if (target.id === "sayHi") {
+          alert("Hi");
+        }
+      })
+    </script>
+  </body>
+</html>
