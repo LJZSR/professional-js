@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <input type="text" id="myText">
+    <script>
+      var textBox = document.getElementById("myText");
+      textBox.addEventListener('textInput', function() {
+        console.log(event.data);
+      })
+    </script>
+  </body>
+</html>

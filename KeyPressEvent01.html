@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <input type="text" id="myText">
+    <script>
+      var textBox = document.getElementById("myText");
+      textBox.addEventListener('keypress', function() {
+        console.log(event.charCode);
+      })
+    </script>
+  </body>
+</html>

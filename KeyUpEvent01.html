@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <input type="text" id="myText">
+    <script>
+      var textBox = document.getElementById("myText");
+      textBox.addEventListener('keyup', function() {
+        console.log("keyup");
+        console.log(event.keyCode);
+      })
+      textBox.addEventListener('keydown', function() {
+        console.log("keydown");
+      })
+      textBox.addEventListener('keypress', function() {
+        console.log("keypress");
+      })
+    </script>
+  </body>
+</html>
