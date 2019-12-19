@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <form method="GET">
+      <input type="text" name="tel1" id="txtTel1" maxlength="3">
+      <input type="text" name="tel2" id="txtTel2" maxlength="3">
+      <input type="text" name="tel3" id="txtTel3" maxlength="4">
+      <input type="submit" value="Click Me">
+    </form>
+    <script>
+      (function() {
+        function tabForward(event) {
+          var target = event.target;
+          // console.log(target.value.length)
+          // console.log(target.getAttribute("maxlength"))
+          if (target.value.length == target.getAttribute("maxlength")) {
+            var form = target.form;
+            // console.log(form)
+            for (var i=0; i<form.elements.length; ++i) {
+              if (form.elements[i] == target) {
+                if (form.elements[i+1]) {
+                  form.elements[i+1].focus();
+                }
+                return;
+              }
+            }
+          }
+        }
+        var textbox1 = document.getElementById("txtTel1");
+        var textbox2 = document.getElementById("txtTel2");
+        var textbox3 = document.getElementById("txtTel3");
+        textbox1.addEventListener("keyup", tabForward);
+        textbox2.addEventListener("keyup", tabForward);
+        textbox3.addEventListener("keyup", tabForward);
+      })();
+    </script>
+  </body>
+</html>
