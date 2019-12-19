@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <input type="text" id="myText" value="请输入内容">
+    <script>
+      var textbox = document.getElementById("myText");
+      textbox.addEventListener("focus", function() {
+        var target = event.target;
+        target.setSelectionRange(1,3);
+      })
+    </script>
+  </body>
+</html>

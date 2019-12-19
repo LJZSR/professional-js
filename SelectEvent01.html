@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <input type="text" id="myText" value="请输入内容">
+    <script>
+      var textbox = document.getElementById("myText");
+      textbox.addEventListener("select", function() {
+        console.log("Text selected: " + this.value)
+      })
+    </script>
+  </body>
+</html>

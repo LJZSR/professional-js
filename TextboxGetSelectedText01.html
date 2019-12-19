@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <textarea id="myText" cols="30" rows="10">请输入内容</textarea>
+    <script>
+      var textbox = document.getElementById("myText");
+      textbox.addEventListener("select", function() {
+        console.log(textbox.value.substring(textbox.selectionStart, textbox.selectionEnd));
+      })
+    </script>
+  </body>
+</html>
