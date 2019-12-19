@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      window.addEventListener("load", function() {
+        var element = document.forms[0].elements[0]
+        if (element.autofocus !== true) {
+          element.focus();
+          console.log("JS focus");
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <form method="GET" id="myForm" action="">
+      <input type="text" name="textInput" autofocus>
+      <ul>
+        <li><input type="radio" name="color" value="red">Red</li>
+        <li><input type="radio" name="color" value="green">Green</li>
+        <li><input type="radio" name="color" value="blue">Blue</li>
+      </ul>
+      <input type="submit" name="submit-btn" value="Click Me">
+    </form>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <form action="">
+      <textarea cols="30" rows="10" ></textarea
+    </form>
+    <script>
+      var textbox = document.forms[0].elements[0];
+      textbox.addEventListener("focus", function(event) {
+        var target = event.target;
+        if (target.style.backgroundColor !==  "red") {
+          target.style.backgroundColor = "yellow"
+        }
+      });
+      textbox.addEventListener("blur", function(event) {
+        var target = event.target;
+        console.log(target.value)
+        if (/[^\d]/.test(target.value)) {
+          target.style.backgroundColor = "red";
+        }
+        else {
+          target.style.backgroundColor = "";
+        }
+      });
+      textbox.addEventListener("change", function(event) {
+        var target = event.target;
+        console.log(target.value)
+        if (/[^\d]/.test(target.value)) {
+          target.style.backgroundColor = "red";
+        }
+        else {
+          target.style.backgroundColor = "";
+        }
+      });
+    </script>
+  </body>
+</html>
