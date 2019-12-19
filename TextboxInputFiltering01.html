@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <input type="text" id="myText">
+    <script>
+      var textbox = document.getElementById("myText");
+      textbox,addEventListener("keypress", function(event) {
+        var charcode = event.charCode;
+        console.log(charcode)
+        if (!/\d/.test(String.fromCharCode(charcode)) || event.metaKey) {
+          event.preventDefault()
+        }
+      })
+    </script>
+  </body>
+</html>
