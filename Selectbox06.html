@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <select name="location1" id="selLocation">
+      <option value="Sunnyvale, CA">Sunnyvale</option>
+      <option value="Los Angels, CA">Los Angels</option>
+      <option value="Mountain View, CA">Mountain View</option>
+      <option value="">China</option>
+      <option>Australia</option>
+    </select>
+  </body>
+  <script>
+    var selectbox = document.getElementById("selLocation");
+    var optionToMove = selectbox.options[1];
+    selectbox.insertBefore(optionToMove, selectbox.options[optionToMove.index-1])
+  </script>
+</html>
