@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <select name="location" id="selLoctaion">
+      <option value="Sunnyvale, CA">Sunnyvale</option>
+      <option value="Los Angels, CA">Los Angels</option>
+      <option value="Mountain View, CA">Mountain View</option>
+      <option value="">China</option>
+      <option>Australia</option>
+    </select>
+    <script>
+      var selectbox = document.getElementById("selLoctaion");
+      selectbox.multiple = true;
+      selectbox.addEventListener("change", function(){
+        var result = new Array();
+        var option = null;
+        for (var i=0, len=selectbox.options.length; i<len; ++i) {
+          option = selectbox.options[i];
+          if (option.selected) {
+            result.push(option)
+          }
+        }
+        console.log(result)
+      });
+      
+    </script>
+  </body>
+</html>

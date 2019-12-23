@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <select name="location" id="selLoctaion">
+      <option value="Sunnyvale, CA">Sunnyvale</option>
+      <option value="Los Angels, CA">Los Angels</option>
+      <option value="Mountain View, CA">Mountain View</option>
+      <option value="">China</option>
+      <option>Australia</option>
+    </select>
+    <script>
+      function getSelectedOptions(selectbox) {
+        var result = new Array();
+        var option = null;
+        for (var i=0, len=selectbox.options.length; i<len; ++i) {
+          option = selectbox.options[i];
+          if (option.selected) {
+            result.push(option)
+          }
+        }
+        return result;
+      }
+      var selectbox = document.getElementById("selLoctaion");
+      selectbox.multiple = true;
+      selectbox.addEventListener('change', function() {
+        var selectOptions = getSelectedOptions(this);
+        var message = "";
+        for (var i=0; i<selectOptions.length; ++i) {
+          message += "Selected Index: " + selectOptions[i].index + "\nSelected Text: " + selectOptions[i].text +"\nSelected Value: " + selectOptions[i].value + '\n'
+        }
+        console.log(message);
+      });
+    </script>
+  </body>
+</html>
