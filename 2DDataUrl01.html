@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <canvas id="drawing" width="200" height="200">
+      A drawing if something.
+    </canvas>
+  </body>
+  <script>
+    var drawing = document.getElementById("drawing");
+    if (drawing.getContext) {
+      var imgURL = drawing.toDataURL("image/png");
+      var image = document.createElement("img");
+      image.src = imgURL;
+      document.body.appendChild(image);
+    }
+  </script>
+</html>
