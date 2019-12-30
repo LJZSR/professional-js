@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <canvas id="drawing" width="400" height="400"></canvas>
+    <script>
+      var drawing = document.getElementById("drawing");
+      if (drawing.getContext) {
+        var context = drawing.getContext("2d");
+        var fontSize = 100;
+        context.font = fontSize + "px Arial";
+        while (context.measureText("Hello Word!").width > 140) {
+          fontSize--;
+          context.font = fontSize + "px Arial";
+        }
+        context.fillText("Hello world!", 10, 30);
+        context.fillText("Font size is " + fontSize + "px", 10, 50)
+      }
+    </script>
+  </body>
+</html>
