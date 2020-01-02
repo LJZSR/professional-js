@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <script>
+    function sendPost() {
+      var myInput = document.getElementById("myInput").value;
+      var myFrame = document.getElementById("myFrame").contentWindow;
+      myFrame.postMessage(myInput, "http://127.0.0.1:5500");
+    }
+    window.addEventListener("message", function(event) {
+      console.log(event.data);
+    })
+  </script>
+  <body>
+    <iframe id="myFrame" src="./blank.html" frameborder="1" width="300" height="300"></iframe>
+    <input type="text" id="myInput">
+    <input type="button" id="mybtn" value="点击提交" onclick="sendPost()">
+  </body>
+</html>
