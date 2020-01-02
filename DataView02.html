@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      var buffer = new ArrayBuffer(20);
+      var view = new DataView(buffer);
+      view.setUint16(0, 25);
+      view.setUint16(2, 50);
+      alert(view.getUint8(0))
+    </script>
+  </body>
+</html>

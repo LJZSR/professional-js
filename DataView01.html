@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <canvas id="drawing" width="200" height="200"></canvas>
+    <script>
+      var buffer = new ArrayBuffer(20);
+      var view = new DataView(buffer);
+      view.setUint16(0, 25);
+      view.setUint16(2, 50);
+      alert(view.getUint16(2))
+    </script>
+  </body>
+</html>
