@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <canvas id="drawing" width="200" height="200"></canvas>
+    <script>
+      var drawing = document.getElementById("drawing");
+      if (drawing.getContext) {
+        var context = drawing.getContext("2d");
+        var gradient = context.createRadialGradient(55, 55, 10, 55, 55, 30);
+        gradient.addColorStop(0, "white");
+        gradient.addColorStop(1, "black");
+        context.fillStyle = "#ff0000";
+        context.fillRect(10, 10, 50, 50);
+        context.fillStyle = gradient;
+        context.fillRect(30, 30, 50, 50);
+      }
+    </script>
+  </body>
+</html>
