@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <img src="./1.jpeg", width="50">
+    <canvas id="drawing" width="200", height="200"></canvas>
+    <script>
+      var drawing = document.getElementById("drawing");
+      if (drawing.getContext) {
+        var context = drawing.getContext("2d");
+      }
+      var image = document.images[0];
+      image.onload = function() {
+        context.drawImage(image, 50, 10, 50, 50)
+      }
+    </script>
+  </body>
+</html>
