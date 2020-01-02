@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <canvas id="drawing" width="200" height="200"></canvas>
+    <script>
+      var context = document.getElementById("drawing").getContext("2d");
+      context.fillStyle = "#ff0000"
+      context.fillRect(10, 10, 50, 50);
+      
+      context.globalCompositeOperation = "destination-over";
+      
+      context.fillStyle = "#0000ff";
+      context.fillRect(30, 30, 50, 50);
+    </script>
+  </body>
+</html>
