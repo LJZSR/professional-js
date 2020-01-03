@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    #droptarget {
+      width: 500px;; 
+      height: 500px;
+      padding: 10px;
+      border: 1px solid #aaaaaa;
+    }
+  </style>
+  <script>
+
+  </script>
+  <body>
+    <div id="droptarget"></div>
+    <br />
+    <img id="dragtarget" src="./1.jpeg" draggable="true" width="200" height="200"/>
+    <script>
+      var droptarget = document.getElementById("droptarget");
+      var dragtarget = document.getElementById("dragtarget");
+      droptarget.addEventListener("dragover", function(event) {
+        event.preventDefault();
+      });
+      droptarget.addEventListener("drop", function(event) {
+        event.preventDefault();
+        var data=event.dataTransfer.getData("Text");
+        event.target.appendChild(document.getElementById(data));
+      });
+      dragtarget.addEventListener("dragstart", function(event) {
+        event.dataTransfer.setData("Text",event.target.id);
+      }) 
+    </script>
+  </body>
+</html>
