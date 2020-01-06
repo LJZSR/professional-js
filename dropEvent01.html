@@ -23,7 +23,8 @@
       });
       droptarget.addEventListener("drop", function(event) {
         event.preventDefault();
-        var data=event.dataTransfer.getData("Text");
+        var data = event.dataTransfer.getData("Text");
+        console.log(data);
         event.target.appendChild(document.getElementById(data));
       });
       dragtarget.addEventListener("dragstart", function(event) {
