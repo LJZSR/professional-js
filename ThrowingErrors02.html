@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <input type="button" id="myBtn" value="Click">
+    <script>
+      function process(values) {
+        try {
+          if (!(values instanceof Array)) {
+            throw new Error("process(): Argument must be an array.");
+          }
+          values.sort();
+
+          for (var i=0, len=values.length; i<len; ++i) {
+            if (values[i] > 100) {
+              return values[i];
+            }
+          }
+          return -1;
+        } catch(err) {
+          return err.message;
+        }
+      }
+      var myBtn = document.getElementById("myBtn");
+      myBtn.addEventListener("click", function() {
+        console.log(process([1,2,3,101,100,200]))
+      })
+    </script>
+  </body>
+</html>
