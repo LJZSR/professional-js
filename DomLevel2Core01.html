@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      var xmldom = document.implementation.createDocument("", "root", null);
+      console.log(xmldom.documentElement.tagName);
+
+      var child = xmldom.createElement("child");
+      xmldom.documentElement.appendChild(child);
+      console.log(xmldom);
+    </script>
+  </body>
+</html>
