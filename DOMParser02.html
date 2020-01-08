@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      var parser = new DOMParser();
+      var xmldom, errors;
+      try {
+        xmldom = parser.parseFromString("<root>", "text/xml");
+        errors = xmldom.getElementsByTagName("parsererror");
+        if (errors.length > 0) {
+          throw new Error("Parsing Error!");
+        }
+        else {
+          console.log("Parsing Success!");
+        }
+      }
+      catch(error) {
+        console.log(error.message);
+      }
+    </script>
+  </body>
+</html>

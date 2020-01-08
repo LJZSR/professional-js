@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      var parse = new DOMParser();
+      var xmldom = parse.parseFromString("<root><child /></root>", "text/xml");
+      console.log(xmldom.documentElement.tagName);
+      console.log(xmldom.documentElement.firstChild.tagName);
+
+      var anotherChild = xmldom.createElement("child");
+      xmldom.documentElement.appendChild(anotherChild);
+      console.log(xmldom.getElementsByTagName("child").length);
+      console.log(xmldom);
+    </script>
+  </body>
+</html>
