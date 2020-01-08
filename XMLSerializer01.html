@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      var xmldom = document.implementation.createDocument("", "root", null);
+      var child = xmldom.createElement("child");
+      xmldom.documentElement.appendChild(child);
+
+      var serializer = new XMLSerializer();
+      var xml = serializer.serializeToString(document);
+      console.log(xml);
+    </script>
+  </body>
+</html>
