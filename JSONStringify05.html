@@ -4,16 +4,15 @@
     <script>
       var book = {
         title: "Professional JavaScript",
-        authors: ["Nicholas C. Zaksa"],
+        authors: ["Nicholas C. Zaksa", "Hello"],
         edition: 3,
-        year: 2011
+        year: 2011,
+        toJSON: function() {
+          return this.title;
+        }
       };
-      console.log(book);
       var jsonText = JSON.stringify(book);
       console.log(jsonText);
-      var bookCopy = JSON.parse(jsonText);
-      console.log(bookCopy);
-      console.log(JSON.stringify(book, ["title", "edition"]));
     </script>
   </body>
 </html>
