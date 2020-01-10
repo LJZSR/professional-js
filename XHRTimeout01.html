@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4) {
+          if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
+            console.log(xhr.response);
+          }
+          else {
+            console.log("Request was unsucessful: " + xhr.status);
+          }
+        }
+      }
+      xhr.open("get", "2.jpeg", true);
+      xhr.timeout = 1000;
+      xhr.ontimeout = function() {
+        console.log("Request did not return in a second!");
+      }
+      xhr.send(null);
+    </script>
+  </body>
+</html>
