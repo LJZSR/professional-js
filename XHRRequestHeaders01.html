@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4) {
+          if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
+            console.log(xhr.responseText);
+          }
+          else {
+            console.log("Request was unsucessful: " + xhr.status);
+          }
+        }
+      }
+      xhr.open("get", "./1.jpeg", xhr.status, true);
+      xhr.send(null);
+      console.log(xhr.getAllResponseHeaders());
+    </script>
+  </body>
+</html>
