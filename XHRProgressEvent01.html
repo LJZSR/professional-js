@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p id="status"></p>
+    <script>
+      var xhr = new XMLHttpRequest();
+      xhr.onload = function () {
+        if ((xhr.status>=200 && xhr.status<300) || xhr.status==304) {
+          console.log(xhr.responseText);
+        }
+        else {
+          console.log("Request was unsucessful: " + xhr.status);
+        }
+      }
+      xhr.onprogress = function(event) {
+        var pStatus = document.getElementById("status");
+        if (event.lengthComputable) {
+          pStatus.innerHTML = "Received " + event.position + " of " + event.totalSize + " bytes";
+        }
+      }
+      xhr.open("get", "./1.jpeg", true);
+      xhr.send(null);
+    </script>
+  </body>
+</html>
